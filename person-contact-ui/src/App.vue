@@ -1,7 +1,9 @@
 <template>
-	<v-container>
-		<div>Digital Address Book</div>
-	</v-container>
+	<div class="app">
+		<v-container>
+			<router-view></router-view>
+		</v-container>
+	</div>
 </template>
 
 <script setup></script>
