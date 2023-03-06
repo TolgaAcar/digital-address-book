@@ -196,6 +196,7 @@ export default {
 			}
 		},
 		closeModal() {
+			this.$refs.form.reset();
 			this.dialog = false;
 		},
 		async validateForm() {
