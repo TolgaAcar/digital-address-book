@@ -183,11 +183,7 @@ export default {
 				} else {
 					response = await api.addContact(this.contactInfo);
 				}
-				/*
-				 * TODO:
-				 * Handle errors
-				 */
-				console.log(response);
+
 				if (response.hasError) {
 					this.setContactFormStatus("loading");
 					this.closeModal();

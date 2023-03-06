@@ -97,7 +97,6 @@ export default {
 	},
 	async created() {
 		await this.fetchContactList();
-		console.log(this.contactList);
 	},
 	computed: {
 		isLoading() {
@@ -120,7 +119,6 @@ export default {
 		},
 		editItem(item) {
 			const clickedItem = this.getObject(item);
-			console.log(clickedItem);
 		},
 		async deleteItem(item) {
 			this.setContactListStatus("loading");
@@ -132,7 +130,6 @@ export default {
 			}
 
 			this.updateContactList();
-			console.log(response);
 		},
 		getObject(proxyObject) {
 			return Object.assign({}, proxyObject);
