@@ -117,9 +117,6 @@ export default {
 			this.contactList = response;
 			this.setContactListStatus("success");
 		},
-		editItem(item) {
-			const clickedItem = this.getObject(item);
-		},
 		async deleteItem(item) {
 			this.setContactListStatus("loading");
 			const response = await api.deleteContact(item.id);
