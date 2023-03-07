@@ -117,7 +117,6 @@ import { useStatusStore } from "../../store/status";
 export default {
 	name: "ContactForm",
 	props: {
-		//TODO: Change name
 		isEditable: {
 			type: Boolean,
 			default: false,
@@ -214,6 +213,13 @@ export default {
 			this.country = this.editableFormData.country;
 		},
 		...mapActions(useStatusStore, ["setContactFormStatus"]),
+	},
+	watch: {
+		dialog(newValue) {
+			if (newValue && this.isEditable) {
+				this.assingEditableData();
+			}
+		},
 	},
 };
 </script>
